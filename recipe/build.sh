@@ -4,10 +4,8 @@ set -x
 
 
 if [[ "$build_platform" != "$target_platform" ]]; then
-    # This flag is used in conjunction with QT_FORCE_BUILD_TOOLS=ON
-    # https://github.com/qt/qtbase/commit/acfbe3b7795c741b269fc23ed2c51c5937cd7f4f
-    export QT_HOST_PATH="$BUILD_PREFIX"
-    CMAKE_ARGS="${CMAKE_ARGS} -DQT_FORCE_BUILD_TOOLS=ON"
+    # Force using build env moc:
+    CMAKE_ARGS="${CMAKE_ARGS} -DCMAKE_PREFIX_PATH=${BUILD_PREFIX};${PREFIX}"
 fi
 
 mkdir build
