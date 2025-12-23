@@ -5,7 +5,7 @@ set -x
 
 if [[ "$build_platform" != "$target_platform" ]]; then
     # Force using build env moc:
-    CMAKE_ARGS="${CMAKE_ARGS} -DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM=NEVER"
+    CMAKE_ARGS="${CMAKE_ARGS} -DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM=NEVER -DQT_HOST_PATH=${BUILD_PREFIX}"
 fi
 
 mkdir build
