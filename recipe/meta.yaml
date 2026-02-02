@@ -31,8 +31,6 @@ requirements:
     - libxmlpp
     - libxml2-devel
     - liblzma-devel  # [win]
-    - glibmm
-    - glib
     - libgl-devel  # [linux]
     - qt6-main
     - qwt
