@@ -47,7 +47,6 @@ outputs:
         - cmake
       host:
         - coda >=2.24.2
-        - eigen
         - hdf4
         - hdf5 >=1.14.2
         - libnetcdf
@@ -72,7 +71,6 @@ outputs:
         - cmake
       host:
         - coda >=2.24.2
-        - eigen
         - hdf4
         - hdf5 >=1.14.2
         - libnetcdf
