@@ -86,7 +86,7 @@ outputs:
         - libnetcdf
         - qt6-main
         - qwt
-        - doas_cl
+        - {{ pin_subpackage('doas_cl', exact=True) }}
     test:
       commands:
         - test -f ${PREFIX}/bin/qdoas  # [linux]
