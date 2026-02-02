@@ -37,8 +37,7 @@ requirements:
 
 outputs:
   - name: doas_cl
-    script: install.sh  # [unix]
-    script: install.bat  # [win]
+    script: {{ 'install.sh' if unix else 'install.bat' }}
     requirements:
       build:
         - {{ compiler('c') }}
@@ -61,8 +60,7 @@ outputs:
         - doas_cl
 
   - name: qdoas
-    script: install.sh  # [unix]
-    script: install.bat  # [win]
+    script: {{ 'install.sh' if unix else 'install.bat' }}
     requirements:
       build:
         - {{ compiler('c') }}
